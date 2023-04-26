@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('  {{ url_for('static', filename = 'assets/img/home-bg.jpg')}}  ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <center>
+        <h1>Welcome Admin! You are logged in.</h1>
+        </center>
+
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Add/Edit Posts</p>
+                        <a href="/dashboard"><button class="btn btn-primary">Dashboard Home</button></a>
+                        <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+                        <hr>
+                        <div class="my-5">
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/edit/{{sno}}" method="post">
+            <div class="form-floating">
+                <input class="form-control" name="title" id="title" type="text" placeholder="Title" data-sb-validations="required" value="{{post.title}}"/>
+                <label for="name">Title</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">A title is required.</div>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" name="slug" id="slug" type="text" placeholder="Slug" data-sb-validations="required,email" value="{{post.slug}}"/>
+                <label for="email">Slug</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">A slug is required.</div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" name="content" id="content" type="text" placeholder="Content" data-sb-validations="required" value="{{post.content}}"/>
+                <label for="phone">Content</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+            </div>
+            <br />
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                </div>
+            </div>
+
+            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+            <!-- Submit Button-->
+            <button class="btn btn-primary " id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</main>
+{% endblock %}        

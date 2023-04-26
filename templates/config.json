@@ -1,0 +1,18 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codecrumbs",
+        "prod_uri": "mysql://root:@localhost/codecrumbs",
+        "fb_url": "https://facebook.com/codecrumbs",
+        "tw_url": "https://twitter.com/pracheetakalra",
+        "gt_url": "https://github.com/pracheetakalra",
+        "gmail-user": "codecrumbs2023@gmail.com",
+        "gmail-password": "ilhkeghpidzyrxsm",
+        "no_of_posts": 3,
+        "login_image": "login.svg",
+        "admin_user": "codecrumbs",
+        "admin_password": "codecrumbs2023",
+        "upload_location": "C:\\Users\\Pracheeta Kalra\\Desktop\\MCA\\Coding\\Python\\Flask\\static"
+    }
+}
